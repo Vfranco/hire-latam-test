@@ -1,0 +1,10 @@
+<app-header title="City Summary" [showBackButton]="true"></app-header>
+<div class="container">
+	<h4 class="mt-3 mb-4">{{ 'CITY_MAP' | translate }} </h4>
+</div>
+<div id="map"></div>
+<div class="container" *ngIf="city">
+	<h5 class="mt-3 mb-4">{{ 'GENERAL_INFORMATION' | translate }} {{ city.city }}</h5>
+	<p *ngIf="summaryCity">{{ summaryCity }}</p>
+	<p *ngIf="!summaryCity">{{ 'LOADING' | translate }}</p>
+</div>

@@ -1,0 +1,40 @@
+<app-header title="List of Cities" ></app-header>
+
+<div class="container mt-2">
+  <div class="row mb-3 justify-content-between">
+
+    <div class="col-md-6 col-12 mb-2 d-flex flex-column align-items-start">
+      <label for="recordsPerPage">{{ 'NUMBER_CITIES' | translate }}:</label>
+      <select id="recordsPerPage" #recordsSelect (change)="getCities(recordsSelect.value)" class="form-control">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+  
+    <div class="col-md-2 col-12 mt-4">
+      <button type="button" class="btn btn-primary w-100" [disabled]="notFill" (click)="goToCompareCities()">{{ 'COMPARE_CITIES' | translate }}</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let city of listCities" class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="card">
+        <div class="card-header bg-light position-relative">
+          <div class="form-check position-absolute top-50 end-0 translate-middle-y">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" [disabled]="getActive(city)" (change)="checkCity(city)">
+          </div>
+          <h5 class="card-title">{{ city.name }}</h5>
+        </div>
+        <div class="card-body" (click)="goToCityDetail(city.wikiDataId)">
+          <p class="card-text">{{ 'COUNTRY' | translate }}: {{ city.country }}</p>
+          <p class="card-text">{{ 'REGION' | translate }}: {{ city.region }}</p>
+          <p class="card-text">{{ 'POPULATION' | translate }} {{ city.population | number }}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-outline-primary w-100" (click)="goToCityDetail(city.wikiDataId)">{{ 'VIEW_DETAIL' | translate }}</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>

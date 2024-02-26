@@ -1,0 +1,11 @@
+@import "../../../../theme//mixins";
+
+#map {
+  margin: auto;
+  width: 51%;
+  height: 40%;
+
+  @include mobile {
+    width: 100%;
+  }
+}

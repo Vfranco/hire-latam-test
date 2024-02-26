@@ -1,0 +1,13 @@
+{
+    "GENERAL_INFORMATION": "General information about",
+    "NO_SUMMARY": "We do not have a summary, the maximum number of requests was exceeded.",
+    "LOADING": "Loading...",
+    "COUNTRY": "Country",
+    "REGION": "Region",
+    "POPULATION": "Population",
+    "CITY_MAP": "City map",
+    "VIEW_DETAIL": "View Detail",
+    "NUMBER_CITIES": "Number of cities",
+    "COMPARISON": "Comparison",
+    "COMPARE_CITIES": "Compare cities"
+}

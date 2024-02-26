@@ -1,0 +1,10 @@
+<app-header title="Compare Cities" [showBackButton]="true"></app-header>
+
+<div class="container mt5">
+    <h2 class="mb-4">{{ 'COMPARISON' | translate }}</h2>
+    <div class="card p-3">
+        <div [innerHTML]="compareData" *ngIf="compareData" class="card-body">
+        </div>
+        <p *ngIf="!compareData">{{ "LOADING" | translate }}</p>
+    </div>
+</div>

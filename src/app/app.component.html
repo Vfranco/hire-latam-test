@@ -1,0 +1,13 @@
+<div class="content">
+    <div class="text-center" *ngIf="isLoading">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    <div *ngIf="alertData" class="alert alert-{{ alertData.type }} alert-dismissible fade show m-2" role="alert">
+        <small>{{ alertData.message }}</small>
+        <button type="button" class="btn-close" (click)=" hideAlert()"></button>
+    </div>
+    <router-outlet *ngIf="!isLoading"></router-outlet>
+</div>
+
