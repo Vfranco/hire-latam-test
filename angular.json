@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/Vfranco/hire-latam-test/",
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
