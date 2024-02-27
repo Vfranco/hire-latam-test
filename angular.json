@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hirelatam-test": {
+    "hire-latam-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hirelatam-test:build:production"
+              "browserTarget": "hire-latam-test:build:production"
             },
             "development": {
-              "browserTarget": "hirelatam-test:build:development"
+              "browserTarget": "hire-latam-test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hirelatam-test:build"
+            "browserTarget": "hire-latam-test:build"
           }
         },
         "test": {
@@ -100,6 +100,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
